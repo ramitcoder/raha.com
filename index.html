@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Valentine's Day Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="heart"></div>
+        <h1 id="title">Happy Valentine's Day!</h1>
+    </div>
+
+    <div class="card-body">
+        <p id="message">You light up my world! Let's celebrate love!</p>
+        <button id="colorBtn">Change Card Background</button>
+        <button id="confettiBtn">Send Confetti</button>
+        <button id="popupBtn">Read Love Letter</button>
+    </div>
+
+    <div class="emoji-container" id="emojiContainer"></div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Your Love Letter:</h2>
+        <p>"You are the reason for my smile, my joy, and my heart's beats. I cherish every moment with you, and my love for you grows stronger every day."</p>
+        <button id="closePopup">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

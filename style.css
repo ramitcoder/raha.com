@@ -1,0 +1,193 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffcccc;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ff6f61, #ff4c4c);
+    z-index: -1;
+    animation: backgroundAnimation 8s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: radial-gradient(circle, #ff6f61, #ff4c4c);
+    }
+    100% {
+        background-image: radial-gradient(circle, #ff9a9e, #ff4c4c);
+    }
+}
+
+.card {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: cardBounce 1s ease;
+}
+
+@keyframes cardBounce {
+    0% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-header {
+    position: relative;
+}
+
+.heart {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: heartAnimation 1.5s infinite;
+}
+
+@keyframes heartAnimation {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(15deg);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 50px;
+    color: #e40000;
+    font-weight: bold;
+    animation: textAnimation 2s ease-in-out;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-body p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #555;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e40000;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.emoji {
+    font-size: 30px;
+    margin: 5px;
+    animation: emojiFloat 2s infinite ease-in-out;
+}
+
+@keyframes emojiFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #e40000;
+    margin-bottom: 20px;
+}
+
+#closePopup {
+    padding: 10px 15px;
+    background-color: #e40000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#closePopup:hover {
+    background-color: #ff4c4c;
+}
